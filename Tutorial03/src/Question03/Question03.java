@@ -21,24 +21,16 @@ public class Question03 {
             System.out.print(a);
             writeLine(a, length - 1);
         }
+        else{
+            System.out.println("");
+        }
 
     }
 
     public static void writeBlock(char a, int length, int width) {
-        if (length != 0&&width!=0) {
-            System.out.print(a);
-            writeBlock(a, length - 1,width);
-            
-        }
-        else if(length==0){
-            System.out.println("");
-             writeBlock(a, length+1, width-1);
-        }
-        else if(width!=0){
-            System.out.print(a);
-            writeBlock(a, length-1, width-1);
-        }else{
-            System.out.println("");
+        if(width!=0){
+            writeLine(a, length);
+            writeBlock(a, length, width-1);
         }
 
     }
